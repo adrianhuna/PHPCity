@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/4d586d46ce710874d7a6a12caf8d985eb2ff8c4c/threejs/three-orbitcontrols.d.ts",
+    "raw": "registry:dt/three-orbitcontrols#0.0.0+20160704010734",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/4d586d46ce710874d7a6a12caf8d985eb2ff8c4c/threejs/three-orbitcontrols.d.ts"
+  }
+}
