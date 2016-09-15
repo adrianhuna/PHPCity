@@ -94,7 +94,7 @@
   min-height: 20px;
   max-width: 100px;
   padding: 2px;
-  font-size: 11px; }
+  font-size: 12px; }
 
 .carousel-caption,
 .carousel-control {
@@ -139,8 +139,7 @@ h2 {
 
 #filter-navbar {
   font-size: 12px;
-  min-height: 28px;
-  top: 50px; }
+  min-height: 28px; }
   #filter-navbar .container-fluid {
     position: relative;
     top: -4px; }
@@ -160,6 +159,9 @@ h2 {
 
 .modal-body h3:first-of-type {
   margin-top: 0; }
+
+.navbar {
+  border-radius: 0; }
 
 @media (max-width: 768px) {
   #filter-navbar .navbar-header {
