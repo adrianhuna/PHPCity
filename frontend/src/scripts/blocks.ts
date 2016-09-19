@@ -63,8 +63,8 @@ export class Building extends Block {
   private calculateBlockWidth(widthAttr: string, widthLevels: number[]) {
     for (var i = 0; i < 5; i++) {
       if (this.data[widthAttr] <= widthLevels[i]) {
-        this.w = (i + 2) + 2;   // +2 as base width; +2 for margin
-        this.h = (i + 2) + 2;   // +2 as base width; +2 for margin
+        this.w = (i * 2 + 2) + 2;   // +2 as base width; +2 for margin
+        this.h = (i * 2 + 2) + 2;   // +2 as base width; +2 for margin
         break;
       }
     }

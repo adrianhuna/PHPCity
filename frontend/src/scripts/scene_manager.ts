@@ -50,7 +50,7 @@ export class SceneManager {
     document.body.appendChild(SceneManager.renderer.domElement);
 
     // create a camera, zoom it out from the model a bit, and add it to the scene.
-    SceneManager.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
+    SceneManager.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000000);
     SceneManager.camera.position.set(70, 70, 150);
     SceneManager.scene.add(SceneManager.camera);
 
