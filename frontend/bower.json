@@ -13,7 +13,7 @@
     "structure",
     "three.js"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/adrianhuna/PHPCity",
   "ignore": [
     "**/.*",
     "node_modules",

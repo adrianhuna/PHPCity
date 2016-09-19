@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/adrianhuna/PhpCity"
+    "url": "https://github.com/adrianhuna/PHPCity"
   },
   "keywords": [
     "visualization",
@@ -21,6 +21,7 @@
   "author": "Adrian Huna",
   "license": "MIT",
   "devDependencies": {
+    "del": "^2.2.2",
     "browserify": "^13.1.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.12",
@@ -41,8 +42,5 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
-  },
-  "dependencies": {
-    "del": "^2.2.2"
   }
 }
