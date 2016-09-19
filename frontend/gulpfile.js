@@ -17,7 +17,7 @@ const rev = require('gulp-rev');
 const revReplace = require('gulp-rev-replace');
 
 var paths = {
-  pages: ['src/*.html', 'src/*.ico'],
+  static: ['src/*.html', 'src/*.ico'],
   css: ['src/css/*.css']
 };
 
@@ -38,9 +38,12 @@ var watchedBrowserify = watchify(browserify({
   packageCache: {}
 }).plugin(tsify));
 
-gulp.task('copy-html', function () {
-  return gulp.src(paths.pages)
+gulp.task('copy-static', function () {
+  gulp.src(paths.static)
     .pipe(gulp.dest('dist'));
+
+  return gulp.src('input_data/*.json')
+    .pipe(gulp.dest('dist/data'));
 });
 
 gulp.task('styles', function () {
@@ -73,12 +76,12 @@ gulp.task('vendor-js', function () {
 });
 
 gulp.task('clean', function (done) {
-  return del(['./dist/**/*', '!./dist/data/', '!./dist/data{,/**}'], { force: true }, done);
+  return del(['./dist/**/*'], { force: true }, done);
 });
 
 gulp.task('watch', function() {
   gulp.watch('src/**/*.scss', ['styles']);
-  gulp.watch('src/**/*.html', ['copy-html']);
+  gulp.watch('src/**/*.html', ['copy-static']);
 });
 
 gulp.task("revision", ['build'], function(){
@@ -128,7 +131,7 @@ function dist() {
 gulp.task('default', ['clean'], bundle);
 gulp.task('build:dist', ['clean'], dist);
 
-gulp.task('build', ['watch', 'copy-html', 'styles', 'copy-fonts', 'vendor-css', 'vendor-js']);
+gulp.task('build', ['watch', 'copy-static', 'styles', 'copy-fonts', 'vendor-css', 'vendor-js']);
 
 watchedBrowserify.on('update', bundle);
 watchedBrowserify.on('log', gutil.log);
