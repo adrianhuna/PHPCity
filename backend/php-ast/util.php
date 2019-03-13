@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php // https://github.com/nikic/php-ast/blob/master/util.php
+
+declare(strict_types=1);
 
 use ast\flags;
 
