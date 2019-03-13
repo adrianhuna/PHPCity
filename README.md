@@ -26,7 +26,7 @@ visualization will load.
 
 ## Visualize custom project
 <a name="visualize-custom-project"></a>In order to visualize your own PHP project, you will need to generate JSON file describing your project. Please,
-see instructions in [backend part](https://github.com/adrianhuna/PHPCity/backend) of this project.
+see instructions in [backend part](https://github.com/adrianhuna/PHPCity/tree/master/backend) of this project.
 
 ## How to use PHPCity
 Instructions are provided in the [visualization](https://adrianhuna.github.io/PHPCity) by clicking "Help" item in the top menu.

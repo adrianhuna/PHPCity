@@ -4,10 +4,14 @@ require 'functions.php';
 
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
-print "Please input path to folder with files that will be processed: ";
+if ($argv[1]) {
+    $baseDir = trim($argv[1]);
+} else {
+    print "Please input path to folder with files that will be processed: ";
+    $fp       = fopen('php://stdin', 'r');
+    $baseDir  = trim(fgets($fp, 1024));
+}
 
-$fp       = fopen('php://stdin', 'r');
-$baseDir  = trim(fgets($fp, 1024));
 $project  = preg_replace('/\//', '-', $baseDir);
 
 try {
@@ -27,7 +31,7 @@ foreach ($regex as $name => $object) {
         "file"    => preg_replace("/^". preg_quote($baseDir . '\\', '/') . "/", '', $name, 1)
     ];
 
-    $ast = ast\parse_file($name, $version=30);
+    $ast = ast\parse_file($name, $version=70);
 
     // list of nodes in file
     if ($ast instanceof ast\Node) {
