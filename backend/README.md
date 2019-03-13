@@ -3,7 +3,7 @@ This is backend part of [PHPCity](https://github.com/adrianhuna/PHPCity) visuali
 
 ## Requirements
 - PHP7
-- PHP [abstract syntaxt tree](https://github.com/nikic/php-ast) extension installed
+- PHP [abstract syntax tree](https://github.com/nikic/php-ast) extension installed
 
 ## Usage
 - run: `php parser.php` and follow instructions
